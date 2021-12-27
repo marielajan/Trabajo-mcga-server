@@ -21,20 +21,26 @@ app.use(cors());
 
 /* ROUTES */
 const personalRoutes = require('./routes/personal');
+const userRoutes = require('./routes/user');
 
 app.use('/api/personal', personalRoutes());
+app.use('/api/user', userRoutes());
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`GestionRRHH ~ Online - Running on PORT: ${process.env.PORT || 3000}`);
-});
+app.listen(process.env.PORT || 4000, () => {
+console.log(`Personal ~ Online - Running on PORT: ${process.env.PORT || 4000}`);
+}); 
+
 
 
 
 // const express = require('express')
 // const cors = require('cors')
 // const bodyParser = require('body-parser')
+
 // const mongoose = require('mongoose');
+
 // const app = express()
+
 // const url = 'mongodb+srv://Mariela_Jan:<password>@cluster0-tn0id.mongodb.net/test?retryWrites=true&w=majority';
 // //va el password de mi cuenta en mongodb
 // // mongoose.connect(url, { useNewUrlParser: true }, function (error) {

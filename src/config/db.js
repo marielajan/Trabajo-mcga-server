@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 require('dotenv').config({ path: '.env' });
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true })
+  .connect(process.env.MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() => {
-    console.log(`Database: GestionRRHH ~ Online`);
+    console.log(`Database: Gestión Personal ~ Online`);
   })
   .catch((e) => {
     console.error(e);
@@ -12,4 +12,5 @@ mongoose
 
 // Import Models Here.
 
-const user = require('../models/personal');
+const personal = require('../models/personal');
+const user = require('../models/user'); 
