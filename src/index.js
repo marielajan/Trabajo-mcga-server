@@ -39,7 +39,6 @@ app.get('/', (req, res) => {
 res.status(200).send("<h1>Test server</h1>")
 })
 
-    
 app.post('/login', (req, res) => {
    if (req.body.email !== myUser.email) {
      return res.status(400).send({

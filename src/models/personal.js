@@ -11,24 +11,6 @@ const personalSchema = new mongoose.Schema({
     required: 'El email es requerido',
     lowercase: true,
   },
-
-  // password: {
-  //   type: String,
-  //   required: 'El password es requerido',
-  //   lowercase: true,
-  // },
-
-  // ciudad: {
-  //   type: String,
-  //   required: 'La ciudad es requerida.',
-  //   trim: true,
-  // },
-
-  // direccion: {
-  //   type: String,
-  //   required: 'La direccion es requerida.',
-  //   trim: true,
-  // },
   
   estado: {
     type: String,

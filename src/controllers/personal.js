@@ -21,10 +21,10 @@ exports.updatePersonal = async (req, res) => {
   try {
     const body = req.body;
 
-    if (!body.personalId)
+    if (!body._id)
       return res.status(400).json('No existe personal con ese Id.');
 
-    const personal = await Personal.findByIdAndUpdate(body.personalId, body, {
+    const personal = await Personal.findByIdAndUpdate(body._id, body, {
       new: true,
     });
 
